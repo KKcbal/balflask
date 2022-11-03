@@ -3,10 +3,25 @@
 
 {% block body %}
     <!-- Start of body content specific to page -->
+    <script>
+        function bigCol(x) {
+            var m = x.innerHTML
+            x.outerHTML = "<div onmouseover='bigCol(this)' onmouseout='normalCol(this)'' class='col-6'></div>";
+            console.log(x.innerHTML)
+        }
+        
+        function normalCol(x) {
+          x.class = "col-4";
+        }
+        function smallCol(x, y) {
+            x.m
+            document.getElementById("h").innerText
+        }
+    </script>
     <div class="px-5 py-5 mx-auto">
         <h1 class="text-white"><strong>e</strong></h1>
         <div class="row">
-            <div class="col-4">
+            <div onmouseover="bigCol(this)" onmouseout="normalCol(this)"  class="col-4">
                 <div class="card">
                     <img class="card-img-top" src="{{ url_for('static', filename='assets/penut.jpg') }}" alt="Python Development" height="250">
                     <div class="card-body">

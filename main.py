@@ -29,6 +29,10 @@ def about():
 def infographic():
     return render_template("infographic.html")
 
+@app.route('/chart/')
+def chart():
+    return render_template("chart.html")
+
 # this runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)

@@ -8,8 +8,23 @@
 {% block body %}
     <!- Try building a new body here, bootstrap is a wise choice ->
     <div class="px-5 py-5 mx-auto">
-        <h1 class="text-primary"><strong>Stubby Body</strong></h1>
-        <p class="text-secondary">AJ :)</p>
+        <head>
+            <script>
+                function myFunction() {
+                    document.getElementById("men").style = "visibility:visible";
+                }
+            </script>
+        </head>
+        <body>
+            <h2>Demo JavaScript in Head</h2>
+        
+            <p id="demo">a paragraph</p>
+        
+            <button type="button" onclick="myFunction()">Try it</button>
+            <button id="men" onclick="this.innerHTML=Date()" style="visibility:hidden">H</button>
+            <button onclick="this.innerHTML=Date()">H</button>
+            <input type="button"><br><br>
+        </body>
     </div>
 {% endblock %}
 
