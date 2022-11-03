@@ -2,14 +2,36 @@
 {% set project = "Chart" %}
 
 {% block body %}
-    <table>
-        <thead>
-            <th>Quote</th>
-            <th>Helped</th>
-            <th>Useless</th>
-        </thead>
-        <tbody id="result"></tbody>
-    </table>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+    
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+    
+        tr:nth-child(even) {
+          background-color: blue;
+        }
+        tr:nth-child(odd) {
+            background-color: red
+        }
+    </style>
+    <div class="px-5 py-5 mx-auto">
+        <table>
+            <thead>
+                <th>Quote</th>
+                <th>Helped</th>
+                <th>Useless</th>
+            </thead>
+            <tbody id="result"></tbody>
+        </table>
+    </div>
     <script>
         const resultContainer = document.getElementById("result");
 
